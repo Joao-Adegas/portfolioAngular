@@ -1,0 +1,33 @@
+<aside>
+    <div class="container-aside">
+        <div class="self-div">
+
+            <div class="image-container">
+                <img src="assets/images/person.png" alt="self-animated-person">
+            </div>
+
+            <h2>João Adegas</h2>
+
+            <div class="work-p">
+                <p>Software Developer</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="contacts">
+            @for(contact of contacts; track contact.contact){
+            <div class="contact">
+                <div class="image-contact">
+                    <img [src]="contact.icon" alt="conatct.text">
+                </div>
+                <div class="contact-texts-container">
+                    <p class="contact-title">{{contact.contact}}</p>
+                    <p class="contact-form">{{contact.text}}</p>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+
+</aside>

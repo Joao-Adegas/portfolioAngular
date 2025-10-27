@@ -1,0 +1,20 @@
+<div class="painel-content">
+
+    <div class="container">
+        <div class="tittle">
+            <h1>{{ labelAtivo }}</h1>
+            <hr>
+        </div>
+        <div class="navbar-container">
+            <nav class="navBar">
+                <ul>
+                    @for(item of navLinks; track item.id){
+                    <li><a (click)="mudarSessao(item.id)" [class.active]="sessaoAtiva === item.id">{{item.label}}</a>
+                    </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</div>

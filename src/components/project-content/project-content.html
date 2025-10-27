@@ -1,0 +1,23 @@
+<section class="projects">
+    <div>
+        <ul class="categori">
+            <li>Mobile</li>
+            <li>Artificial Inteligence (API)</li>
+            <li>Web development</li>
+        </ul>
+    </div>
+
+    <div class="container-projects">
+        @for(a of projects;track $index){
+            <div class="card-project">
+                <!-- <div class="image-project">
+                    <img [src]="a.image" [alt]="a.name">
+                </div> -->
+                <div class="description-project">
+                    <p class="titlle">{{a.name}}</p>
+                    <p>{{a.description}}</p>
+                </div>
+            </div>
+        }
+    </div>
+</section>

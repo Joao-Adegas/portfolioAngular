@@ -1,0 +1,26 @@
+<section class="section-about">
+    <div class="apresentation">
+        <p>I am a full-stack developer passionate about developing practical solutions. I enjoy working with libraries, frameworks, Rest APIs, mobile platforms, etc. I am currently working as an apprentice at Bosch.</p>
+    </div>
+    <div class="i-have-worked">
+        <h2>I have Worked</h2>
+
+        <div class="cards-worked">
+            @for(work of works; track work.work){
+                <div class="card">
+                    <div class="icon">
+                        <img [src]="work.icon" [alt]="work.description">
+                    </div>
+                    <div class="text">
+                        <div class="title-work">
+                            <p><b>{{work.work}}</b></p>
+                        </div>
+                        <div class="description-work">
+                            <p>{{work.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

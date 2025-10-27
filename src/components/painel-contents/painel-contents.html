@@ -1,0 +1,23 @@
+<div class="painel-container">
+
+    <navbar (sessaoMudou)="mudarSessao($event)"></navbar>
+
+    <div class="contents-container">
+        @switch (sessaoAtiva) {
+            @case ('about') {
+                <about-container></about-container>
+            }
+
+            @case ('projects') {
+                <project-content></project-content>
+            }
+            
+            @case ('achiviments') {
+               <achiviments-content></achiviments-content>
+            }
+            @case ('skills') {
+               <skills-content></skills-content>
+            }
+        }
+    </div>
+</div>
