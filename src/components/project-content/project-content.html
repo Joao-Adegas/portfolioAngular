@@ -10,12 +10,19 @@
     <div class="container-projects">
         @for(a of projects;track $index){
             <div class="card-project">
-                <!-- <div class="image-project">
+                <div class="image-project">
                     <img [src]="a.image" [alt]="a.name">
-                </div> -->
+                </div>
                 <div class="description-project">
                     <p class="titlle">{{a.name}}</p>
-                    <p>{{a.description}}</p>
+                    <p class="description-card-project">{{a.description}}</p>
+                    <div class="tec">
+                        @for (item of a.languages; track $index) {
+                            <div class="language">
+                                <p>{{item}}</p>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
         }

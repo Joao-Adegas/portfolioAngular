@@ -1,35 +1,82 @@
-.categori
-    list-style: none
-    display: inline-flex
-    gap: 2rem
-
-    li
-        &:hover
-            color: #555555
-            cursor: pointer
-
-        &.active
-            color: #d8b411
-
-
-.container-projects
+.projects
     display: flex
-    justify-content: center
-    gap: 1rem
-    flex-wrap: wrap
+    flex-direction: column
+    gap: 2rem
+    
+    .categori
+        list-style: none
+        display: inline-flex
+        gap: 2rem
 
-    .card-project
-        border: 1px solid grey
-        border-radius: 1rem
-        padding: 0.5rem
-        // max-width: 20rem
+        li
+            &:hover
+                color: #555555
+                cursor: pointer
 
-        .image-project
-            img
-                width: 30%      
+            &.active
+                color: #d8b411
 
-        .description-project
-            font-size: 0.8rem        
+    .container-projects
+        max-height: 25rem
+        overflow-y: scroll
+        display: flex
+        justify-content: center
+        gap: 1rem
+        flex-wrap: wrap
 
-            .titlle
-                font-size: 1rem                                                                                                                                               
+        .card-project
+            width: 20rem
+            border-radius: 1rem
+            padding: 0.5rem
+            box-sizing: border-box 
+            transition: transform 0.3s ease
+            overflow: hidden
+
+            &:hover
+                transform: translateY(-5px)
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.347)
+                cursor: pointer
+
+            .image-project
+                overflow: hidden
+                border-radius: 0.5rem 0.5rem 0 0
+                position: relative // ← Adicionado para efeitos extras se necessário
+
+                img
+                    width: 100%
+                    border-radius: 0.5rem 0.5rem 0 0
+                    display: block
+                    transition: transform 0.5s ease, filter 0.5s ease // ← Adicionada transição para filter
+                    transform-origin: center
+
+            &:hover .image-project img
+                transform: scale(1.05)
+                filter: brightness(0.6) // ← Escurece a imagem em 40%
+
+            .description-project
+                min-height: 7rem
+                padding: 0.5rem
+                font-size: 0.8rem        
+                margin-top: 0
+                border-radius: 0 0 0.5rem 0.5rem
+
+                .tec
+                    display: flex
+                    gap: 1rem
+
+                    .language
+                        background-color: #f59a112f
+                        padding: 0.1rem 0.6em
+                        color: #ff9812
+                        border-radius: 1rem
+                        p
+                            font-weight: bold   
+                
+                .titlle
+                    font-size: 1rem
+                    font-weight: 700
+
+                .description-card-project
+                    font-weight: 300
+                    padding: 0.5rem
+                    color: grey
